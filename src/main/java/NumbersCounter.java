@@ -27,6 +27,6 @@ public class NumbersCounter {
     }
 
     public static void main(String[] args) {
-        System.out.println(countNumbers("C:\\Users\\igorv\\Downloads\\numbers.txt"));
+        System.out.println(countNumbers(args[0]));
     }
 }
