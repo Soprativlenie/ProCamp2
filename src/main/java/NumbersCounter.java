@@ -1,9 +1,10 @@
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
 public class NumbersCounter {
-    public double countNumbers(String path) {
+    public static double countNumbers(String path) {
         double sum = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
@@ -26,7 +27,6 @@ public class NumbersCounter {
     }
 
     public static void main(String[] args) {
-        NumbersCounter numbersCounter = new NumbersCounter();
-        System.out.println(numbersCounter.countNumbers("C:\\Users\\38095\\Downloads\\numbers.txt"));
+        System.out.println(countNumbers(args[0]));
     }
 }
