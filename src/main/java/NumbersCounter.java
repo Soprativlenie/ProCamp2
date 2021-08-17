@@ -6,7 +6,7 @@ import java.io.IOException;
 public class NumbersCounter {
     public static double countNumbers(String path) {
         double sum = 0;
-        try (BufferedReader br = new BufferedReader(new FileReader(new File(path)))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
             while ((line = br.readLine()) != null) {
                 if (line.startsWith("#") || line.length() <= 0) {
@@ -27,6 +27,6 @@ public class NumbersCounter {
     }
 
     public static void main(String[] args) {
-        System.out.println(countNumbers("C:\\Users\\igorv\\Desktop\\numbers.txt"));
+        System.out.println(countNumbers("C:\\Users\\igorv\\Downloads\\numbers.txt"));
     }
 }
